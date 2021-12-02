@@ -143,7 +143,6 @@ public class BilibiliController {
             bilibiliLoginVO.setDedeuserid(Integer.parseInt(dedeuserid));
             bilibiliLoginVO.setSessdata(sessdata);
             bilibiliLoginVO.setCode(0);
-
             return bilibiliLoginVO;
         }
 
