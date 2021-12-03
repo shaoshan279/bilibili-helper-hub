@@ -24,7 +24,7 @@ public class CheckCookieTask extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         JSONObject resp = delegate.checkCookie();

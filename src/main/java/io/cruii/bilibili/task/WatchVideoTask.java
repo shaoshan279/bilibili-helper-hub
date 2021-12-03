@@ -17,7 +17,7 @@ public class WatchVideoTask extends VideoTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         JSONObject resp = delegate.getExpRewardStatus();

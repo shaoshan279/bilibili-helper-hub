@@ -30,7 +30,7 @@ public class DonateCoinTask extends VideoTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         // 防止全部都投过币而导致任务卡死

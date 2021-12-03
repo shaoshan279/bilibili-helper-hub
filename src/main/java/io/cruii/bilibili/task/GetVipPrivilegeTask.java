@@ -18,7 +18,7 @@ public class GetVipPrivilegeTask extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         BilibiliUser user = BilibiliUserContext.get();

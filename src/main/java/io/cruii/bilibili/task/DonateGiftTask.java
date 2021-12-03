@@ -32,7 +32,7 @@ public class DonateGiftTask extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         if (!Boolean.TRUE.equals(config.getDonateGift())) {

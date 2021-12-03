@@ -18,7 +18,7 @@ public class MangaTask extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
+        //checkAttemptsAndChangeProxy();
         addAttempts();
 
         JSONObject resp = delegate.mangaCheckIn(delegate.getConfig().getDevicePlatform());
