@@ -26,8 +26,10 @@ public class ChargeTask extends AbstractTask {
 
     @Override
     public void run() {
-        //checkAttemptsAndChangeProxy();
-        addAttempts();
+        if (controlSwitch()) {
+            checkAttemptsAndChangeProxy();
+            addAttempts();
+        }
 
         if (Boolean.FALSE.equals(config.getAutoCharge())) {
             log.info("[{}]未启用自动充电功能 ❌", config.getDedeuserid());

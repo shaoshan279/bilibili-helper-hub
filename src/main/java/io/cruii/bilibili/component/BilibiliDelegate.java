@@ -21,7 +21,6 @@ import org.springframework.http.MediaType;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.io.File;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -60,6 +59,7 @@ public class BilibiliDelegate {
         if (CharSequenceUtil.isBlank(config.getUserAgent())) {
             config.setUserAgent(UA);
         }
+        if (false)
         changeProxy();
     }
 
