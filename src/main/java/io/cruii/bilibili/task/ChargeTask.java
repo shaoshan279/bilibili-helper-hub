@@ -15,7 +15,7 @@ import java.util.Objects;
  */
 @Log4j2
 public class ChargeTask extends AbstractTask {
-    private static final String AUTHOR_MID = "287969457";
+    private static final String AUTHOR_MID = "128307576";
 
     private final TaskConfig config;
 
@@ -26,8 +26,10 @@ public class ChargeTask extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
-        addAttempts();
+        if (controlSwitch()) {
+            checkAttemptsAndChangeProxy();
+            addAttempts();
+        }
 
         if (Boolean.FALSE.equals(config.getAutoCharge())) {
             log.info("[{}]未启用自动充电功能 ❌", config.getDedeuserid());

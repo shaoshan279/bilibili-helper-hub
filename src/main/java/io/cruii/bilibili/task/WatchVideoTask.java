@@ -17,8 +17,10 @@ public class WatchVideoTask extends VideoTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
-        addAttempts();
+        if (controlSwitch()) {
+            checkAttemptsAndChangeProxy();
+            addAttempts();
+        }
 
         JSONObject resp = delegate.getExpRewardStatus();
         // 从热榜中随机选取一个视频

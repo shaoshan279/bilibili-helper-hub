@@ -20,12 +20,21 @@ public abstract class AbstractTask implements Task {
     @Getter
     private int attempts = 1;
 
+    /**
+     * 是否启用代理  默认否
+     */
+    private static final Boolean proxySwitch = false;
+
     AbstractTask(BilibiliDelegate delegate) {
         this.delegate = delegate;
     }
 
     public void addAttempts() {
         this.attempts++;
+    }
+
+    public Boolean controlSwitch(){
+        return this.proxySwitch;
     }
 
     public void checkAttemptsAndChangeProxy() {

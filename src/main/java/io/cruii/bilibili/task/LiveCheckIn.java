@@ -16,8 +16,10 @@ public class LiveCheckIn extends AbstractTask {
 
     @Override
     public void run() {
-        checkAttemptsAndChangeProxy();
-        addAttempts();
+        if (controlSwitch()) {
+            checkAttemptsAndChangeProxy();
+            addAttempts();
+        }
 
         JSONObject resp = delegate.liveCheckIn();
         if (resp.getInt(CODE) == 0) {
