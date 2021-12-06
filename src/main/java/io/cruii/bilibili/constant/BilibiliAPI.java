@@ -105,14 +105,20 @@ public interface BilibiliAPI {
     String LIST_GIFTS = "http://api.live.bilibili.com/xlive/web-room/v1/gift/bag_list";
 
     /**
-     * 获取直播间信息
+     * 获取直播间信息  --通过用户ID
      */
     String GET_LIVE_ROOM_INFO = "http://api.live.bilibili.com/room/v1/Room/getRoomInfoOld";
 
     /**
+     * 获取直播间信息  --通过房间号
+     */
+    String GET_LIVE_ROOM_INFO_BY_ROOMID = "http://api.live.bilibili.com/room/v1/Room/room_init";
+    /**
      * 送出直播间礼物
      */
     String SEND_GIFT = "http://api.live.bilibili.com/gift/v2/live/bag_send";
+
+    String SEND_TOLL_GIFT = "https://api.live.bilibili.com/xlive/revenue/v1/gift/sendGold";
 
     /**
      * 充电

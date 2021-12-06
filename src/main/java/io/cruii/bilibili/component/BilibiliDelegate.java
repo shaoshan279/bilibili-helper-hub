@@ -448,6 +448,19 @@ public class BilibiliDelegate {
     }
 
     /**
+     * 获取直播间信息
+     *
+     * @param roomId 主播房间id
+     * @return 解析后的JSON对象 {@link JSONObject}
+     */
+    public JSONObject getLiveRoomInfoByRoomId(String roomId) {
+        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+        params.put("id", CollUtil.newArrayList(roomId));
+
+        return doGet(BilibiliAPI.GET_LIVE_ROOM_INFO_BY_ROOMID, params);
+    }
+
+    /**
      * 赠送直播间礼物
      *
      * @param userId  主播的uid
@@ -475,6 +488,37 @@ public class BilibiliDelegate {
         String requestBody = HttpUtil.toParams(params);
 
         return doPost(BilibiliAPI.SEND_GIFT, requestBody);
+    }
+
+    /**
+     * 赠送直播间礼物
+     *
+     * @param userId  主播的uid
+     * @param roomId  主播的房间id
+     * @param bagId   背包id
+     * @param giftId  礼物id
+     * @param giftNum 礼物数量
+     * @return 解析后的JSON对象 {@link JSONObject}
+     */
+    public JSONObject sendGift(String userId, String roomId,
+                                 String bagId, String giftId, int giftNum) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("biz_id", roomId);
+        params.put("ruid", userId);
+        params.put("gift_id", giftId);  //31164 入团
+        params.put("bag_id", 0);
+        params.put("gift_num", giftNum);
+        params.put("uid", config.getDedeuserid());
+        params.put("csrf", config.getBiliJct());
+        params.put("send_ruid", 0);
+        params.put("coin_type", "gold");
+        params.put("storm_beat_id", 0);
+        params.put("price", 100);
+        params.put("platform", "pc");
+        params.put("biz_code", "live");
+        String requestBody = HttpUtil.toParams(params);
+
+        return doPost(BilibiliAPI.SEND_TOLL_GIFT, requestBody);
     }
 
     /**
