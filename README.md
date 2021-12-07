@@ -1,9 +1,12 @@
 <div align="center">
 
 <h1 align="center">
-    Bilibili Helper Hub
+   瞎写 上传为了方便 项目自用!!! Fork  Cruii佬的小破站 养号项目
 </h1>
 
+<h1 align="center">
+    Bilibili Helper Hub
+</h1>
 
 [![GitHub license](https://img.shields.io/github/license/Cruii/bilibili-helper-hub?style=for-the-badge)](https://github.com/Cruii/bilibili-helper-hub/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Cruii/bilibili-helper-hub?style=for-the-badge)](https://github.com/Cruii/bilibili-helper-hub/stargazers)
@@ -36,7 +39,3 @@
 ## License
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCruii%2Fbilibili-helper-hub.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FCruii%2Fbilibili-helper-hub?ref=badge_large)
-
-## Sponsor
-
-![Sponsor](https://cruii.io/upload/2021/10/1-c5f430c3f57c461580f04cfb8fdc06e2.png)
